@@ -5,10 +5,11 @@
 """
 
 import tensorflow as tf
+import tensorflow.contrib.eager as tfe
+import pygame
 
 
 debug = True
-
 
 class MyTensorFlow:
 
@@ -64,7 +65,6 @@ def example2():
     #     [3 4]]
 
 def example3():
-    import tensorflow.contrib.eager as tfe
 
     w = tfe.Variable([[1.0]])
     with tfe.GradientTape() as tape:
